@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-import { Box, Navbar } from "@corey_hutcheson/reusable-react";
+import { Box } from "@corey_hutcheson/reusable-react";
 
 const App = () => {
   // const links = [
