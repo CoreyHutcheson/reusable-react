@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import ExampleComponent from '@corey_hutcheson/reusable-react'
+import { Box } from "@corey_hutcheson/reusable-react";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <Box />
       </div>
-    )
+    );
   }
 }
