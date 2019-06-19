@@ -1,23 +1,18 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "standard",
-    "standard-react"
-  ],
+  "extends": ["standard", "standard-react"],
   "env": {
     "es6": true
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "parserOptions": {
     "sourceType": "module"
   },
   "rules": {
-    // don't force es6 functions to include space before paren
     "space-before-function-paren": 0,
-
-    // allow specifying true explicitly for boolean props
-    "react/jsx-boolean-value": 0
+    "react/jsx-boolean-value": 0,
+    "quotes": [2, "double", "avoid-escape"],
+    "semi": [2, "always"],
+    "jsx-quotes": [2, "prefer-double"]
   }
 }
