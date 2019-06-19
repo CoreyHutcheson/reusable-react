@@ -23,8 +23,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^^16.8.0",
-    "react-dom": "^^16.8.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-headroom": "^2.2.8",
     "react-scrollspy": "^3.4.0"
   },
