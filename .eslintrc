@@ -13,6 +13,13 @@
     "react/jsx-boolean-value": 0,
     "quotes": [2, "double", "avoid-escape"],
     "semi": [2, "always"],
-    "jsx-quotes": [2, "prefer-double"]
+    "jsx-quotes": [2, "prefer-double"],
+    "indent": [
+      "error",
+      2,
+      {
+        "ignoredNodes": ["TemplateLiteral *"]
+      }
+    ]
   }
 }
