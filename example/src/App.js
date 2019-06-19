@@ -1,13 +1,29 @@
 import React, { Component } from "react";
 
-import { Box } from "@corey_hutcheson/reusable-react";
+import { Box, Navbar } from "@corey_hutcheson/reusable-react";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Box />
-      </div>
-    );
-  }
-}
+const App = () => {
+  // const links = [
+  //   {
+  //     element: "about",
+  //     text: "About"
+  //   },
+  //   {
+  //     element: "projects",
+  //     text: "Projects"
+  //   },
+  //   {
+  //     element: "contact",
+  //     text: "Contact"
+  //   }
+  // ];
+
+  return (
+    <div>
+      <Box />
+      {/* <Navbar links={links} /> */}
+    </div>
+  );
+};
+
+export default App;
