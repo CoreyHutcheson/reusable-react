@@ -166,7 +166,7 @@ Navbar.propTypes = {
   links: PropTypes.array.isRequired,
   extraComp: PropTypes.node,
   theme: PropTypes.oneOf(["light", "dark", "custom"]),
-  scrollOffset: PropTypes.number,
+  scrollToOffset: PropTypes.number,
   spyOffset: PropTypes.number,
   className: PropTypes.string
 };
