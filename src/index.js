@@ -1,2 +1,1 @@
-import { Box } from "./components";
-export { Box };
+export * from "./components";

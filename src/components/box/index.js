@@ -1,2 +1,1 @@
-import { Box } from "./Box.jsx";
-export { Box };
+export { Box } from "./Box.jsx";
