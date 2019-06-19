@@ -54,13 +54,13 @@ export const Scroll = props => {
   };
 
   return (
-    <>
+    <React.Fragment>
       {typeof props.children === "object" ? (
         React.cloneElement(props.children, { onClick: handleClick })
       ) : (
         <span onClick={handleClick}>{props.children}</span>
       )}
-    </>
+    </React.Fragment>
   );
 };
 
