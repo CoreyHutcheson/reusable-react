@@ -4,8 +4,8 @@ import styled, { ThemeProvider } from "styled-components";
 import Scrollspy from "react-scrollspy";
 import Headroom from "react-headroom";
 
-import { ToggleButton } from "./ToggleButton";
-import { Link } from "./Link";
+import { ToggleButton } from "./ToggleButton.jsx";
+import { Link } from "./Link.jsx";
 
 const Header = styled.header`
   background: ${props => props.theme.color_primary};
