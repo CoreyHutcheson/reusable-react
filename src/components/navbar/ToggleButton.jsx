@@ -2,12 +2,12 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
-const btnSize = `40px`;
-const barThickness = `6px`;
-const shift = `20%`;
-const margin = `5.5px`;
-const newBarLength = `33.2415536259px`;
-const rotateAngle = `43.7462446217deg`;
+const btnSize = "40px";
+const barThickness = "6px";
+const shift = "20%";
+const margin = "5.5px";
+const newBarLength = "33.2415536259px";
+const rotateAngle = "43.7462446217deg";
 
 const Container = styled.div`
   width: ${btnSize};
