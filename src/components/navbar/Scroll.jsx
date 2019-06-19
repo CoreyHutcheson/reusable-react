@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import PropTypes from "prop-types";
 
-const Scroll = props => {
+export const Scroll = props => {
   useEffect(() => {
     smoothscroll.polyfill();
   }, []);
@@ -22,11 +22,11 @@ const Scroll = props => {
       switch (type) {
         case "class":
           elem = document.getElementsByClassName(element)[0];
-          scroll = elem ? true : false;
+          scroll = !!elem;
           break;
         case "id":
           elem = document.getElementById(element);
-          scroll = elem ? true : false;
+          scroll = !!elem;
           break;
         default:
       }
@@ -72,5 +72,3 @@ Scroll.propTypes = {
   children: PropTypes.node.isRequired,
   handleLinkClick: PropTypes.func
 };
-
-export default Scroll;
