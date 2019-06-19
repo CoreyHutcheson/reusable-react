@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import Scroll from "./Scroll";
+
+import { Scroll } from "./Scroll";
 
 const contentBorderMixin = color => css`
   :after,
