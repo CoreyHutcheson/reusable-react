@@ -1,5 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
-import styles from "./styles.css";
+const StyledBox = styled.div`
+  width: 500px;
+  height: 200px;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-export const Box = () => <div className={styles.box}>Box!!!</div>;
+export const Box = () => <StyledBox>Box!!!</StyledBox>;
