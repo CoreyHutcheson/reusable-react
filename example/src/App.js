@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from "@corey_hutcheson/reusable-react";
 
 export const links = [
   {
@@ -16,7 +17,17 @@ export const links = [
 ];
 
 const App = () => {
-  return <div />;
+  return (
+    <>
+      <Navbar links={links} theme="dark" />
+
+      <main>
+        <section id="about">About</section>
+        <section id="projects">Projects</section>
+        <section id="contact">Contact</section>
+      </main>
+    </>
+  );
 };
 
 export default App;
