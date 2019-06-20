@@ -1,8 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 
 import { Navbar } from "@corey_hutcheson/reusable-react";
 import { Icon } from "../components/Icon.jsx";
+import { Slider } from "../components/slider-button/Slider.jsx";
 
 import { links } from "../App.js";
 import "./navbar.css";
@@ -25,7 +27,10 @@ storiesOf("Navbar", module)
   .add("Dark", () => <Navbar links={links} theme="dark" />)
   .add("Dark w/ Icon", () => (
     <Navbar links={links} theme="dark" icon={Icon("white")} />
+  ))
+  .add("w/ SliderButton", () => (
+    <Navbar
+      links={links}
+      extraComp={<Slider handleChange={() => action("toggled")} />}
+    />
   ));
-// .add("w/ SliderButton", () => (
-//   <Navbar links={links} extraComp={<Slider />} />
-// ));
