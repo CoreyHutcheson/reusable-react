@@ -12,6 +12,7 @@
     "prop-types": "^15.6.2",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
+    "styled-components": "link:../node_modules/styled-components",
     "react-scripts": "^2.1.5"
   },
   "scripts": {
