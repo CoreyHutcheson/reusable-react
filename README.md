@@ -1,31 +1,110 @@
-# @corey_hutcheson/reusable-react
+# **Not currently working**
 
-> 
+# **@corey_hutcheson/reusable-react**
 
-[![NPM](https://img.shields.io/npm/v/@corey_hutcheson/reusable-react.svg)](https://www.npmjs.com/package/@corey_hutcheson/reusable-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+A small re-usable library containing useful react components.
 
-## Install
+## **Information**
 
-```bash
+At this time, the library only contains a navbar. But other components will be added as they are created.
+
+## **Installation**
+
+Install reusable-react in your project using npm:
+
+```
 npm install --save @corey_hutcheson/reusable-react
 ```
 
-## Usage
+## **Usage**
 
-```jsx
-import React, { Component } from 'react'
+Import the needed react-components into your project, like so:
 
-import MyComponent from '@corey_hutcheson/reusable-react'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+```
+import { Navbar } from "@corey-hutcheson/reusable-react";
 ```
 
-## License
+## **Basic Navbar**
 
-MIT © [CoreyHutcheson](https://github.com/CoreyHutcheson)
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import { Navbar } from "@corey-hutcheson/reusable-react";
+
+const App = () => {
+  const links = [
+    {
+      element: "about",
+      text: "About"
+    },
+    {
+      element: "projects",
+      text: "Projects"
+    },
+    {
+      element: "contact",
+      text: "Contact"
+    }
+  ];
+
+  return (
+    <>
+      <Navbar links={links} />
+
+      <main>
+        <div>
+          <section id="about" className="section">
+            About
+          </section>
+          <section id="projects" className="section">
+            Projects
+          </section>
+          <section id="contact" className="section">
+            Contact
+          </section>
+        </div>
+      </main>
+    </>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector("#root"));
+```
+
+<p align="center">
+  <img src="https://media.giphy.com/media/U5DdCpZ4QHfjin3unq/giphy.gif" alt="Basic Navbar">
+</p>
+
+## **Navbar Props**
+
+| Prop           | Default  | Description                                                           |
+| -------------- | :------: | --------------------------------------------------------------------- |
+| links          | required | Array of objects, each with element and text property                 |
+| icon           |  false   | Pass react component representing icon                                |
+| theme          | 'light'  | Accepts 'light', 'dark', 'custom'                                     |
+| scrollToOffset |    0     | Offset in pixels when scrolling to element                            |
+| extraComp      |  false   | Pass component if you'd like to show extra info in top left of navbar |
+
+## **More Examples**
+
+### **Dark variant with Icon:**
+
+```jsx
+<Navbar icon={<Icon />} theme="dark" scrollToOffset={-50}>
+  <div element="about" text="About" />
+  <div element="projects" text="Projects" />
+  <div element="contact" text="Contact" />
+</Navbar>
+```
+
+<p align="center">
+  <img src="https://i.imgur.com/mikmF6k.jpg" alt="Navbar w/ Icon">
+</p>
+
+## **Contributing**
+
+Pull requests are welcome, and very much appreciated.
+
+## **License**
+
+[MIT](https://choosealicense.com/licenses/mit/)
