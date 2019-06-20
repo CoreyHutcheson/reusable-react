@@ -22,6 +22,7 @@ const StyledIcon = styled.div`
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   margin-left: ${props => props.theme.margin};
+
   &:active,
   &:focus {
     outline: 0;
@@ -31,6 +32,7 @@ const StyledIcon = styled.div`
 const StyledToggle = styled(ToggleButton)`
   margin-left: auto;
   margin-right: ${props => props.theme.margin};
+
   @media (min-width: 600px) {
     display: none;
   }
@@ -45,6 +47,7 @@ const LinkContainer = styled(Scrollspy)`
   top: 50px;
   transition: transform 0.3s ease-out;
   transform: translateX(${props => (props.open ? 0 : "-100vw")});
+
   @media (min-width: 600px) {
     display: flex;
     flex-direction: row;
@@ -60,6 +63,7 @@ const LinkContainer = styled(Scrollspy)`
 
 const Extra = styled.div`
   text-align: center;
+
   @media (min-width: 600px) {
     margin-left: auto;
     margin-right: ${props => props.theme.margin};
@@ -162,8 +166,8 @@ Navbar.defaultProps = {
 };
 
 Navbar.propTypes = {
-  icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
   links: PropTypes.array.isRequired,
+  icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
   extraComp: PropTypes.node,
   theme: PropTypes.oneOf(["light", "dark", "custom"]),
   scrollToOffset: PropTypes.number,
