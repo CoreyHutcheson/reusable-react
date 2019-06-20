@@ -44,7 +44,7 @@ const LinkContainer = styled(Scrollspy)`
   position: absolute;
   top: 50px;
   transition: transform 0.3s ease-out;
-  transform: translateX(${props => (props.open ? 0 : "-100%")});
+  transform: translateX(${props => (props.open ? 0 : "-100vw")});
   @media (min-width: 600px) {
     display: flex;
     flex-direction: row;
