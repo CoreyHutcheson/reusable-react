@@ -1,14 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChessKing } from "@fortawesome/free-solid-svg-icons";
 
 import { Navbar } from "@corey_hutcheson/reusable-react";
-import { links } from "../App.js";
+import { Icon } from "../components/Icon.jsx";
 
-const Icon = color => (
-  <FontAwesomeIcon style={{ color }} icon={faChessKing} size="2x" />
-);
+import { links } from "../App.js";
+import "./navbar.css";
 
 const setup = storyFn => (
   <main>
@@ -29,3 +26,6 @@ storiesOf("Navbar", module)
   .add("Dark w/ Icon", () => (
     <Navbar links={links} theme="dark" icon={Icon("white")} />
   ));
+// .add("w/ SliderButton", () => (
+//   <Navbar links={links} extraComp={<Slider />} />
+// ));
