@@ -33,4 +33,11 @@ storiesOf("Navbar", module)
       links={links}
       extraComp={<Slider handleChange={() => action("toggled")} />}
     />
+  ))
+  .add("w/ Icon + SliderButton", () => (
+    <Navbar
+      links={links}
+      icon={Icon("white")}
+      extraComp={<Slider handleChange={() => action("toggled")} />}
+    />
   ));
