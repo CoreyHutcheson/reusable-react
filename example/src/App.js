@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Box, Navbar } from "@corey_hutcheson/reusable-react";
-
 export const links = [
   {
     element: "about",
@@ -18,12 +16,7 @@ export const links = [
 ];
 
 const App = () => {
-  return (
-    <div>
-      <Navbar links={links} />
-      <Box />
-    </div>
-  );
+  return <div />;
 };
 
 export default App;
