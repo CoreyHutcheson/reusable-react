@@ -29,7 +29,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Navbar links={links} theme="custom" />
+        <Navbar links={links} theme={theme} />
 
         <main>
           <section id="about">About</section>
