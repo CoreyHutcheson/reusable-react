@@ -82,27 +82,25 @@ export const Navbar = props => {
   } = props;
   const [open, setOpen] = useState(false);
 
-  const newTheme = parentTheme => {
+  const newTheme = () => {
     const defaultProps = {
       font_onDark: "rgba(255, 255, 255, 0.87)",
       margin: "2rem"
     };
 
-    if (theme === "custom") {
-      return { ...parentTheme, ...defaultProps };
-    } else {
-      return {
-        color_primary: theme === "dark" ? "#121212" : "#70C1B3",
-        color_primaryLight: theme === "dark" ? "#383838" : "#B2DBBF",
-        color_primaryDark: theme === "dark" ? "#000000" : "#1E6585",
-        color_accent: theme === "dark" ? "#FF9800" : "#FF1654",
-        font_onPrimary1:
-          theme === "dark"
-            ? "rgba(255, 255, 255, 0.87)"
-            : "rgba(0, 0, 0, 0.87)",
-        ...defaultProps
-      };
+    if (typeof theme === "object" && theme !== null) {
+      return { ...theme, ...defaultProps };
     }
+
+    return {
+      color_primary: theme === "dark" ? "#121212" : "#70C1B3",
+      color_primaryLight: theme === "dark" ? "#383838" : "#B2DBBF",
+      color_primaryDark: theme === "dark" ? "#000000" : "#1E6585",
+      color_accent: theme === "dark" ? "#FF9800" : "#FF1654",
+      font_onPrimary1:
+        theme === "dark" ? "rgba(255, 255, 255, 0.87)" : "rgba(0, 0, 0, 0.87)",
+      ...defaultProps
+    };
   };
 
   const handleTogglerClick = () => {
@@ -169,7 +167,10 @@ Navbar.propTypes = {
   links: PropTypes.array.isRequired,
   icon: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
   extraComp: PropTypes.node,
-  theme: PropTypes.oneOf(["light", "dark", "custom"]),
+  theme: PropTypes.oneOfType([
+    PropTypes.oneOf(["light", "dark"]),
+    PropTypes.object
+  ]),
   scrollToOffset: PropTypes.number,
   spyOffset: PropTypes.number,
   className: PropTypes.string
