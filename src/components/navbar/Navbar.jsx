@@ -111,6 +111,11 @@ export const Navbar = props => {
     setOpen(false);
   };
 
+  const handleIconClick = () => {
+    handleLinkClick();
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   const Links = links.map(node => (
     <Link
       key={node.element}
@@ -127,15 +132,7 @@ export const Navbar = props => {
       <Headroom>
         <Header className={className}>
           {/* Include Icon Component if passed in via props */}
-          {icon && (
-            <StyledIcon
-              onClick={() =>
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-              }
-            >
-              {icon}
-            </StyledIcon>
-          )}
+          {icon && <StyledIcon onClick={handleIconClick}>{icon}</StyledIcon>}
 
           <StyledToggle open={open} handleClick={handleTogglerClick} />
 
