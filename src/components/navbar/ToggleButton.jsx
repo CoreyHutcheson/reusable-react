@@ -19,8 +19,8 @@ const Container = styled.div`
     position: relative;
     left: 0px;
     margin-top: ${margin};
-    background: ${props => props.theme.font_onPrimary1};
-    transition: 0.5s ease-in-out;
+    background-color: ${props => props.theme.font_onPrimary1};
+    transition: all 0.5s ease-in-out, background-color 1ms;
     transform-origin: left center;
   }
   ${props =>
