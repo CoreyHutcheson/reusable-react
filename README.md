@@ -81,7 +81,7 @@ ReactDOM.render(<App />, document.querySelector("#root"));
 | -------------- | :------: | --------------------------------------------------------------------- |
 | links          | required | Array of objects, each with element and text property                 |
 | icon           |  false   | Pass react component representing icon                                |
-| theme          | 'light'  | Accepts 'light', 'dark', 'custom'                                     |
+| theme          | 'light'  | Accepts 'light', 'dark', or a theme object {...themeProps}            |
 | extraComp      |  false   | Pass component if you'd like to show extra info in top left of navbar |
 | scrollToOffset |    0     | Offset in pixels when scrolling to element                            |
 | spyOffset      |   -300   | Offset in pixels for when scroll spy is activated                     |
