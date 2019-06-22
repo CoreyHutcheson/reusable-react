@@ -32,8 +32,9 @@ const StyledLink = styled.a`
   letter-spacing: 2px;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 0 0.5rem 1rem;
+  padding: 1rem 0 1rem 1rem;
   position: relative;
+
   ${props =>
     props.className === "is-current" &&
     css`

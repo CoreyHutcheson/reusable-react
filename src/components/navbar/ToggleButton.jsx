@@ -12,6 +12,7 @@ const rotateAngle = "43.7462446217deg";
 const Container = styled.div`
   width: ${btnSize};
   height: ${btnSize};
+
   & > span {
     display: block;
     width: 100%;
@@ -23,6 +24,7 @@ const Container = styled.div`
     transition: all 0.5s ease-in-out, background-color 1ms;
     transform-origin: left center;
   }
+
   ${props =>
     props.open &&
     css`
