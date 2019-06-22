@@ -1,12 +1,10 @@
-# **Not currently working**
-
 # **@corey_hutcheson/reusable-react**
 
 A small re-usable library containing useful react components.
 
 ## **Information**
 
-At this time, the library only contains a navbar. But other components will be added as they are created.
+At this time, the library only contains a SPA navbar. But other components will be added as they are created.
 
 ## **Installation**
 
