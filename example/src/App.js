@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { Navbar } from "@corey_hutcheson/reusable-react";
+import { Navbar, HorizontalGallery } from "@corey_hutcheson/reusable-react";
 
 export const links = [
   {
@@ -25,7 +25,17 @@ const theme = {
   font_onPrimary1: "rgba(0, 0, 0, 0.87)"
 };
 
+const images = [];
+
 const App = () => {
+  for (let i = 0; i < 20; i++) {
+    images.push({
+      src:
+        "https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+      alt: "Kitten"
+    });
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -33,7 +43,9 @@ const App = () => {
 
         <main>
           <section id="about">About</section>
-          <section id="projects">Projects</section>
+          <section id="projects">
+            <HorizontalGallery images={images} />
+          </section>
           <section id="contact">Contact</section>
         </main>
       </>
